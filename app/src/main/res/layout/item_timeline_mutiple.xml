@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/multiple_container"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+
+            android:id="@+id/tv_multiple_start_time"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            />
+        <View
+            android:id="@+id/multiple_line"
+            android:background="@drawable/bar_blue"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_weight="80"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/multiple_ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    style="@style/MultipleImage"
+                    />
+
+                <ImageView
+                    android:id="@+id/image2"
+                    style="@style/MultipleImage"
+                    />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    style="@style/MultipleImage"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    style="@style/MultipleImage"
+                    />
+                <ImageView
+                    android:id="@+id/image5"
+                    style="@style/MultipleImage"
+                    />
+                <ImageView
+                    android:id="@+id/image_more"
+                    style="@style/MultipleImage"
+                    android:src="@drawable/ic_more"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/tv_multiple_used_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

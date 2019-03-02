@@ -1,0 +1,108 @@
+<android.support.v7.widget.CardView
+    android:id="@+id/todo_list_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    app:cardCornerRadius="2dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:id="@+id/img_time"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_timeofday_morning"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                android:text="12:00 - 14:00"
+                android:layout_toRightOf="@id/img_time"
+                style="@style/NormalText"
+                />
+            <TextView
+                android:id="@+id/tv_date"
+                android:text="9日 星期五"
+                android:layout_toRightOf="@id/img_time"
+                android:layout_below="@id/tv_time"
+                style="@style/NormalText"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_used_time"
+                android:text="1hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_time"
+                android:layout_marginLeft="36dp"
+                android:textSize="20sp"
+                />
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/image_more"
+                android:src="@drawable/more"
+                android:layout_width="36dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                />
+        </RelativeLayout>
+
+        <View  style="@style/TodoLine"/>
+
+        <LinearLayout
+            android:id="@+id/ll_tag"
+            style="@style/AddLinearLayout">
+            <ImageView style="@style/NormalImage"
+                       android:src="@drawable/tag"/>
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/tv_tag"
+                style="@style/NormalText"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_desc"
+            style="@style/AddLinearLayout"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:text="fdsahfysdadfsaklfhsdklahfdklsajgkl;ejasl;fkjaslfduasufdopsiaufiopsdaufgposdyhaghopasdyguopefuipsaduigopisdagioiasduyoipguyweoihopasegyopsda;ghosp;"
+                android:padding="5dp"
+                android:id="@+id/tv_desc"
+                style="@style/NormalText"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_locaiton"
+            style="@style/AddLinearLayout">
+            <ImageView style="@style/NormalImage"
+                       android:src="@drawable/location"/>
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/tv_location"
+                style="@style/NormalText"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

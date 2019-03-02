@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.buniaowanfeng.ui.activity.AboutActivity">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/up"
+        />
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/up"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:text="@string/splash_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/up"
+        android:gravity="center"
+        android:id="@+id/down"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/about_donw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

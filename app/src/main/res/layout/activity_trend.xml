@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.buniaowanfeng.ui.activity.SingleAppDetailActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@color/multiple_background"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingTop="16dp"
+                android:id="@+id/trend_head"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/trend_app_icon"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"/>
+                <TextView
+                    android:id="@+id/trend_app_name"
+                    android:layout_toRightOf="@id/trend_app_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/change_app"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_right_ccc"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        app:cardBackgroundColor="@color/multiple_background"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/NotificationLL">
+                <TextView
+                    style="@style/NotificationText"
+                    android:text="@string/count_day"
+                    />
+                <TextView
+                    android:id="@+id/tv_trend_count_day"
+                    style="@style/NotificationText"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/NotificationLL">
+                <TextView
+                    style="@style/NotificationText"
+                    android:text="@string/total_time"
+                    />
+                <TextView
+                    android:id="@+id/tv_trend_used_time"
+                    style="@style/NotificationText"
+                    />
+            </LinearLayout>
+
+            <LinearLayout style="@style/NotificationLL">
+                <TextView
+                    style="@style/NotificationText"
+                    android:text="@string/total_times"
+                    />
+                <TextView
+                    android:id="@+id/tv_number_of_times"
+                    style="@style/NotificationText"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wakes"
+                android:visibility="gone"
+                style="@style/NotificationLL">
+                <TextView
+                    style="@style/NotificationText"
+                    android:text="@string/wake_time"
+                    />
+                <TextView
+                    android:id="@+id/tv_trend_number_of_wakes"
+                    style="@style/NotificationText"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:textSize="24sp"
+        android:padding="5dp"
+        android:background="@color/darker_gray"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="@string/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/trend_empty"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        android:text="@string/hint_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/trend_recycler"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

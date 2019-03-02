@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="3dp"
+    android:layout_marginTop="3dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/trend_detail_day"
+            android:textSize="24sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/trend_detail_progress"
+                android:progress="10"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <LinearLayout
+                android:paddingTop="16dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout style="@style/NotificationLL">
+                    <TextView
+                        style="@style/NotificationText"
+                        android:text="@string/used_times"
+                        />
+                    <TextView
+                        android:id="@+id/tv_trend_used_time"
+                        style="@style/NotificationText"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/NotificationLL">
+                    <TextView
+                        style="@style/NotificationText"
+                        android:text="@string/used_time"
+                        />
+                    <TextView
+                        android:id="@+id/tv_number_of_times"
+                        style="@style/NotificationText"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_wakes"
+                    style="@style/NotificationLL">
+                    <TextView
+                        style="@style/NotificationText"
+                        android:text="@string/wake_time"
+                        />
+                    <TextView
+                        android:id="@+id/tv_trend_number_of_wakes"
+                        style="@style/NotificationText"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
